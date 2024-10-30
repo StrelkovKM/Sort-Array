@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Functions">
+      <UniqueIdentifier>{7e8838fc-bc9c-4e06-aa05-2333014a43c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Functions\Sorts">
+      <UniqueIdentifier>{2d66f874-4382-4f4e-9a7d-42ec1d86b5de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Bubble.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Selection.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Insertion.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Merge.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Quick.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Shell.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort Counting.c">
+      <Filter>Исходные файлы\Functions\Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayEdit.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Txt File.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="FileEnter.txt">
+      <Filter>Исходные файлы\Functions</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
