@@ -19,6 +19,9 @@
     <Filter Include="Исходные файлы\Functions\Sorts">
       <UniqueIdentifier>{2d66f874-4382-4f4e-9a7d-42ec1d86b5de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Files">
+      <UniqueIdentifier>{7410b2fc-ac99-4cd4-b913-39ac80f8c451}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -65,10 +68,19 @@
     <ClCompile Include="Txt File.c">
       <Filter>Исходные файлы\Functions</Filter>
     </ClCompile>
+    <ClCompile Include="Normalization.c">
+      <Filter>Исходные файлы\Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="FileEnter.txt">
-      <Filter>Исходные файлы\Functions</Filter>
+      <Filter>Исходные файлы\Files</Filter>
+    </Text>
+    <Text Include="IntFile.txt">
+      <Filter>Исходные файлы\Files</Filter>
+    </Text>
+    <Text Include="DoubleFile.txt">
+      <Filter>Исходные файлы\Files</Filter>
     </Text>
   </ItemGroup>
 </Project>

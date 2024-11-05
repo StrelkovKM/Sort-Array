@@ -134,6 +134,7 @@
     <ClCompile Include="ArrayEdit.c" />
     <ClCompile Include="Interface.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Normalization.c" />
     <ClCompile Include="Random.c" />
     <ClCompile Include="Sort Bubble.c" />
     <ClCompile Include="Sort Counting.c" />
@@ -145,7 +146,9 @@
     <ClCompile Include="Txt File.c" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="DoubleFile.txt" />
     <Text Include="FileEnter.txt" />
+    <Text Include="IntFile.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

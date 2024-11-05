@@ -1,12 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define _CLOCK_PER_SEC
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 #include "header.h"
 
-void SortArrayCounting( int len_array, int* array)
+void SortArrayCounting(int len_array, int* array)
 {
 	long long int M = 0;
 	int index = 0;

@@ -10,80 +10,57 @@
 
 int main()
 {
-	double *array_d, *copy_array_d;
-	int* array_i, * copy_array_i, * min_number, * max_number;
-	int len_array = 0;
-	
-
+	int enter_code1 = 0, enter_code2 = 0;
 	Introduction();
-	TxtDoubleArray(&len_array, &array_d);
-	//RandomDoubleArray(&len_array, &array_d, &min_number, &max_number);
-	//ConsoleDoubleArray(&len_array, &array_d);
-	
-	//Sort Bubble
-	printf("Sort Bubble\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArrayBubble(len_array, copy_array_d);
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
 
-	//Sort Selection
-	printf("Sort Selection\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArraySelection(len_array, copy_array_d);
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
-	
-	//Sort Insertion
-	printf("Sort Insertion\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArrayInsertion(len_array, copy_array_d);
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
+	do {
+		InputTask(&enter_code1);
+		switch (enter_code1)
+		{
 
-	//Sort Marge
-	printf("Sort Marge\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArrayMarge(copy_array_d, 0, (len_array - 1));
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
+		case 1:
+		{
+			InputSelection(&enter_code2);
+			switch (enter_code2)
+			{
+			case 1:
+				ConsoleWaySort();
+				break;
+			case 2:
+				RandomWaySort();
+				break;
+			case 3:
+				TxtWaySort();
+				break;
+			default: break;
+			}
+			break;
+		}
+		case 2:
+		{
+			InputSelection(&enter_code2);
+			switch (enter_code2)
+			{
+			case 1:
+				ConsoleWayNorm();
+				break;
+			case 2:
+				RandomWayNorm();
+				break;
+			case 3:
+				TxtWayNorm();
+				break;
+			default: break;
+			}
+			break;
+		}
+		default:
+		{
+			system("cls");
+			PrintDelayStr("Goodbye!");
+			return 0;
+		}
 
-	//Sort Quick
-	printf("Sort Quick\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArrayQuick(copy_array_d, 0, (len_array - 1));
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
-
-	//Sort Shell
-	printf("Sort Shell\n");
-	CopyDoubleArray(len_array, array_d, &copy_array_d);
-	PrintDoubleArray(len_array, array_d);
-	SortArrayShell(len_array, copy_array_d);
-	PrintDoubleArray(len_array, copy_array_d);
-	FreeDoubleArray(copy_array_d);
-
-/*
-	printf("Enter the number of numbers to sort:\t");
-	scanf("%d", &len_array);
-
-	ConsoleIntInput(len_array, array_i);
-	//Sort Counting
-	printf("Sort Counting\n");
-	CopyIntArray(len_array, array_i, &copy_array_i);
-	PrintIntArray(len_array, array_i);
-	SortArrayCounting(len_array, copy_array_i);
-	PrintIntArray(len_array, copy_array_i);
-	FreeIntArray(copy_array_i);
-	*/
-
-	FreeDoubleArray(array_d);
-	//FreeDoubleArray(array_i);
-	system("pause");
-	system("cls");
+		}
+	} while (CheckCode(enter_code1, 2) != 0);
 }

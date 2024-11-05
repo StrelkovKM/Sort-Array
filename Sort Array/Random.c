@@ -12,17 +12,14 @@
 void RandomDoubleArray(int *len_array, double** array, double* min_random, double* max_random)
 {
 	int index = 0;
-	char min[] = "Enter the minimum number to generate:\t";
-	char max[] = "Enter the maximum number to generate:\t";
-	char count[] = "Enter the count of generated numbers:\t";
 
-	PrintDelay(count);
+	PrintDelayStr("\nEnter the count of generated numbers:\t");
 	scanf("%d", len_array);
 
-	PrintDelay(min);
+	PrintDelayStr("Enter the minimum number to generate:\t");
 	scanf("%lf", min_random);
 
-	PrintDelay(max);
+	PrintDelayStr("Enter the maximum number to generate:\t");
 	scanf("%lf", max_random);
 
 	
@@ -50,17 +47,14 @@ double MakeRandomDouble(double min_random, double max_random)
 void RandomIntArray(int* len_array, int** array, int* min_random, int* max_random)
 {
 	int index = 0;
-	char min[] = "Enter the minimum number to generate:\t";
-	char max[] = "Enter the maximum number to generate:\t";
-	char count[] = "Enter the count of generated numbers:\t";
 
-	PrintDelay(count);
+	PrintDelayStr("\nEnter the count of generated numbers:\t");
 	scanf("%d", len_array);
 
-	PrintDelay(min);
+	PrintDelayStr("Enter the minimum number to generate:\t");
 	scanf("%d", min_random);
 
-	PrintDelay(max);
+	PrintDelayStr("Enter the maximum number to generate:\t");
 	scanf("%d", max_random);
 
 
@@ -75,9 +69,6 @@ int MakeRandomInt(int min_random, int max_random)
 {
 	int first_random = 0, random_number = 0, second_random = 0;
 	int randomization = 0;
-	randomization = rand();
-	first_random = (int)randomization / RAND_MAX;
-	second_random = first_random * (max_random - min_random);
-	random_number = second_random + min_random;
+	random_number = min_random + rand() % (max_random - min_random + 1);
 	return random_number;
 }

@@ -1,8 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define _CLOCK_PER_SEC
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 #include "header.h"
 
@@ -58,17 +60,16 @@ void MergeArrays(double* array, int left, int middle, int right)
 	FreeDoubleArray(left_array);
 }
 
-void SortArrayMarge(double* array, int left, int right)
+void SortArrayMerge(double* array, int left, int right)
 {
+
 	if (left < right)
 	{
 		int middle = left + (right - left) / 2;
 
-		SortArrayMarge(array, left, middle);
-		SortArrayMarge(array, middle + 1, right);
+		SortArrayMerge(array, left, middle);
+		SortArrayMerge(array, middle + 1, right);
 
 		MergeArrays(array, left, middle, right);
-
-
 	}
 }

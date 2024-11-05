@@ -12,31 +12,34 @@ int index = 0;
 	//Double
 void ConsoleDoubleArray(int *len_array, double** array)
 {
-	double scan_number = 0;
-	char enter_scan[] = "Enter number:\t";
-	char enter_number[] = "Enter the number of numbers to sort:\t";
+	double scan_number = 0;;
 
-	PrintDelay(enter_number);
+	PrintDelayStr("Enter the number of numbers:\t");
 	scanf("%d", len_array);
 
 	*array = (double*)malloc(*len_array * sizeof(double));
 
 	for (index = 0; index < *len_array; ++index)
 	{
-		PrintDelay(enter_scan);
+		PrintDelayStr("Enter number:\t");
 		scanf("%lf", &scan_number);
 		(*array)[index] = scan_number;
 	}
 }
  //Int
-void ConsoleIntArray(int len_array, int* array)
+void ConsoleIntArray(int *len_array, int** array)
 {
 	int scan_number = 0;
 
-	for (index = 0; index < len_array; ++index)
+	PrintDelayStr("Enter the number of numbers to sort:\t");
+	scanf("%d", len_array);
+
+	*array = (int*)malloc(*len_array * sizeof(int));
+
+	for (index = 0; index < *len_array; ++index)
 	{
 		printf("Enter number:\t");
 		scanf("%d", &scan_number);
-		array[index] = scan_number;
+		(*array)[index] = scan_number;
 	}
 }

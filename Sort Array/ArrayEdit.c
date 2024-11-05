@@ -76,7 +76,7 @@ void DelayTime(int number_of_seconds)
 	while (clock() < start_time + milli_seconds);
 }
 
-void PrintDelay(char str[])
+void PrintDelayStr(char str[])
 {
 	int index = 0;
 	for (index = 0; str[index] != '\0'; index++)
@@ -84,4 +84,27 @@ void PrintDelay(char str[])
 		DelayTime(1);
 		putchar(str[index]);
 	}
+}
+
+void DoubleToStr(double number, char str[])
+{
+	sprintf(str, "%.15lf", number);
+}
+
+void PrintTime(double time)
+{
+	char str[100] = "";
+	DoubleToStr(time, str);
+
+	PrintDelayStr("Excecution time: ");
+	PrintDelayStr(str);
+	PrintDelayStr(" seconds.\n");
+}
+
+void PrintDelayDouble(double number)
+{
+	char str[100] = "";
+	DoubleToStr(number, str);
+	PrintDelayStr(str);
+	printf("\n");
 }
